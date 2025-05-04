@@ -1,0 +1,160 @@
+.hero {
+    padding: 0 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .hero__image-container {
+    padding-top: 130px;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero__image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    height: auto;
+    min-width: 100%;
+  }
+  
+  .hero__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .hero__subtitle {
+    font-size: 31px;
+    color:#2F80ED;
+  }
+  
+  .hero__title {
+    height: 137px;
+    color: black;
+    padding-bottom: 20px;
+    font-size: 168px;
+  }
+
+  @media screen and (max-width: 1920px) {
+    .hero {
+        padding: 0 40px;
+        gap: 40px;
+      }
+      
+      .hero__image-container {
+        padding-top: 110px;
+        height: 506px;
+      }
+
+      .hero__image {
+        width: 80%;
+      }
+      
+      .hero__subtitle {
+        font-size: 26px;
+      }
+      
+      .hero__title {
+        height: 114px;
+        padding-bottom: 20px;
+        font-size: 144px;
+      }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .hero {
+        padding: 0 30px;
+        gap: 30px;
+      }
+      
+      .hero__image-container {
+        padding-top: 100px;
+        height: 411px;
+      }
+
+      .hero__image {
+        width: 80%;
+      }
+      
+      .hero__subtitle {
+        font-size: 19px;
+      }
+      
+      .hero__title {
+        height: 88px;
+        padding-bottom: 20px;
+        font-size: 116px;
+      }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero {
+        padding: 0 40px;
+        gap: 50px;
+      }
+      
+      .hero__image-container {
+        padding-top: 120px;
+        height: 487px;
+      }
+
+      .hero__text {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 30px;
+      }
+      
+      .hero__subtitle {
+        font-size: 26px;
+      }
+      
+      .hero__title {
+        height: 100px;
+        padding-bottom: 20px;
+        font-size: 132px;
+        transform: translateX(-12px);
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+        padding: 0 20px;
+        height: auto;
+        gap: 30px;
+      }
+      
+      .hero__image-container {
+        padding-top: 80px;
+        height: 313px;
+      }
+
+      .hero__image {
+        right: 50%;
+        top: 10%;
+        transform: translateX(50%);
+        height: 100%;
+        width: auto;
+      }
+
+      .hero__text {
+        gap: 16px;
+      }
+      
+      .hero__subtitle {
+        font-size: 13px;
+      }
+      
+      .hero__title {
+        height: 50px;
+        padding-bottom: 10px;
+        font-size: 64px;
+        transform: translateX(-6px);
+      }
+  }

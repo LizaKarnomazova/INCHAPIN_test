@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INCHAPIN</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/intro.css" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/inputmask.min.js"></script>
+</head>
+<body>
+  <div id="scroll-container" class="scroll-container">
+    <header class="header">
+      <div class="header__left">
+        <button class="header__menu-button">
+          <span class="burger-icon"></span>
+        </button>
+        <button class="header__select-button large-devices">
+          <div class="select-button__text">
+            <span class="text-top">Выбрать квартиру</span>
+            <span class="text-bottom">Выбрать квартиру</span>
+          </div>
+          <img src="assets/icons/chevron-down.svg" alt="chevron-down">
+        </button>
+      </div>
+      <button class="header__phone-button medium-devices header__open-form-button">
+        <img class="phone-button__icon" src="assets/icons/phone.svg" alt="phone">
+      </button>
+      <img class="header__logo" src="assets/icons/logo.svg" alt="logo">
+      <div class="header__right">
+        <span class="header__phone">+7 495 527 21 21</span>
+        <button class="header__callback-button header__open-form-button">
+          <span class="text-top">Заказать звонок</span>
+          <span class="text-bottom">Заказать звонок</span>
+        </button>
+        <button class="header__select-button small-devices">
+          <div class="select-button__text">
+            <span class="text-top">Выбрать квартиру</span>
+            <span class="text-bottom">Выбрать квартиру</span>
+          </div>
+          <img src="assets/icons/chevron-down.svg" alt="chevron-down">
+        </button>
+        <button class="header__phone-button small-devices header__open-form-button">
+          <img class="phone-button__icon" src="assets/icons/phone.svg" alt="phone">
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__image-container">
+          <img class="hero__image" src="assets/images/image1.png" alt="image1">
+        </div>
+        <div class="hero__text">
+          <h2 class="hero__subtitle">Дом бизнес-класса<br>для ценителей роскоши</h2>
+          <h1 class="hero__title">INCHAPIN</h1>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="intro__left">
+          <span class="intro__link">О проекте</span>
+          <div class="intro__images">
+            <img class="intro__image" src="assets/images/image2.png" alt="">
+          </div>
+          <div class="intro__logo-wrapper">
+            <img class="intro__logo" src="assets/icons/shortLogo.svg" alt="">
+          </div>
+        </div>
+
+        <div class="intro__right">
+          <h2 class="intro__heading">
+            Уютное и безопасное пространство для счастливой,
+            <span class="intro__highlight">спокойной и размеренной жизни</span>
+          </h2>
+          <p class="intro__description">
+            <span class="intro__highlight">Квартиры от 65 до 356 м2 с чистовой отделкой,</span>
+            балконами, лоджиями и террасами в собственной закрытой охраняемой территории.
+          </p>
+          <div class="intro__video">
+            <p class="intro__video-caption">Видео о проекте <br>
+              <span class="intro__duration">1:25 минут</span></p>
+            <div class="intro__video-decor"></div>
+            <div class="intro__video-controls">
+              <button id="videoPlayBtn" class="intro__video-play-button">
+                <img class="intro__video-play-icon" src="assets/icons/playButton.svg" alt="">
+                <span>Play</span>
+              </button>
+              <video id="introVideo" controls style="display: none;">
+                <source src="assets/video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="full-form" id="formOverlay">
+    <button id="closeForm" class="close-btn"></button>
+    <form class="callback-form">
+      <h2 class="callback-form__title">Заказать звонок</h2>
+  
+      <label class="callback-form__field">
+        <input type="text" name="name" class="callback-form__input" required />
+        <span class="callback-form__name">Ваше имя</span>
+      </label>
+  
+      <label class="callback-form__field">
+        <input type="tel" name="phone" id="phone" class="callback-form__input" required />
+        <span class="callback-form__name">Телефон</span>
+      </label>
+  
+      <label class="callback-form__field">
+        <input type="email" name="email" class="callback-form__input" required />
+        <span class="callback-form__name">E-mail</span>
+      </label>
+  
+      <p class="callback-form__note no-uppercase">
+        Нажимая на кнопку «Отправить», вы ознакомлены<br>
+        и соглашаетесь с <span class="callback-form__note--lined">политикой обработки персональных данных</span>
+      </p>
+  
+      <button type="submit" class="callback-form__submit">Отправить</button>
+    </form>
+  </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

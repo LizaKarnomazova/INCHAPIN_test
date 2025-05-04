@@ -1,0 +1,242 @@
+.full-form {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 10;
+    overflow-y: auto;
+  
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+  }
+  
+  .full-form.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 26px;
+    height: 26px;
+    background: center center no-repeat url("../assets/icons/close.svg");
+  }
+
+  .callback-form {
+    padding-top: 100px;
+    max-width: 590px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .callback-form__title {
+    margin-bottom: 40px;
+    font-size: 52px;
+    font-weight: 400;
+  }
+  
+  .callback-form__field {
+    position: relative;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .callback-form__name {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 17px;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+  }
+  
+  .callback-form__input {
+    width: calc(100% - 24px);
+    padding: 12px 12px;
+    border: none;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+  }
+
+  .callback-form__input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.4);
+  }
+
+  
+  .callback-form__input:focus + .callback-form__name,
+  .callback-form__input:hover + .callback-form__name,
+  .callback-form__input:valid + .callback-form__name {
+    transform: translate(-8px, -28px) scale(0.8);
+  }
+  
+  .callback-form__note {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+  }
+
+  .callback-form__note--lined {
+    text-decoration-line: underline;
+  }
+  
+  .callback-form__submit {
+    padding: 24px 69px;
+    font-size: 15px;
+    background: #2F80ED;
+    color: white;
+    border: none;
+    border-radius: 100px;
+  }
+  
+  .callback-form__submit:hover {
+    background: #1e66d6;
+  }
+
+  @media screen and (max-width: 1920px) { 
+      .callback-form {
+        max-width: 454px;
+        gap: 36px;
+      }
+      
+      .callback-form__title {
+        margin-bottom: 20px;
+        font-size: 40px;
+      }
+    
+      .callback-form__name {
+        top: 16px;
+        left: 0;
+        font-size: 16px;
+      }
+      
+      .callback-form__input {
+        font-size: 16px;
+      }
+      
+      .callback-form__input:focus + .callback-form__name,
+      .callback-form__input:hover + .callback-form__name,
+      .callback-form__input:valid + .callback-form__name {
+        transform: translate(-8px, -28px) scale(0.8);
+      }
+      
+      .callback-form__note {
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      
+      .callback-form__submit {
+        padding: 24px 69px;
+        font-size: 14px;
+        border-radius: 100px;
+      }
+  }
+
+  @media screen and (max-width: 1440px) { 
+    .close-btn {
+        top: 50px;
+        right: 50px;
+      }
+
+    .callback-form {
+        max-width: 370px;
+        gap: 32px;
+      }
+      
+      .callback-form__title {
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+    
+      .callback-form__name {
+        top: 12px;
+        left: 0;
+        font-size: 14px;
+      }
+      
+      .callback-form__input {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+      
+      .callback-form__input:focus + .callback-form__name,
+      .callback-form__input:hover + .callback-form__name,
+      .callback-form__input:valid + .callback-form__name {
+        transform: translate(-8px, -24px) scale(0.8);
+      }
+      
+      .callback-form__note {
+        font-size: 11px;
+        line-height: 1.6;
+      }
+      
+      .callback-form__submit {
+        padding: 20px 40px;
+        font-size: 14px;
+      }
+  }
+
+  @media screen and (max-width: 1024px) { 
+    .close-btn {
+        top: 40px;
+        right: 40px;
+      }
+
+    .callback-form {
+        padding-top: 200px;
+        max-width: 440px;
+      }
+  }
+
+  @media screen and (max-width: 768px) { 
+    .close-btn {
+        top: 20px;
+        right: 20px;
+      }
+
+    .callback-form {
+        padding-top: 90px;
+        max-width: 320px;
+        gap: 24px;
+      }
+      
+      .callback-form__title {
+        margin-bottom: 16px;
+        font-size: 20px;
+      }
+    
+      .callback-form__name {
+        top: 12px;
+        left: 0;
+        font-size: 11px;
+      }
+      
+      .callback-form__input {
+        padding: 8px 12px;
+        font-size: 11px;
+      }
+      
+      .callback-form__input:focus + .callback-form__name,
+      .callback-form__input:hover + .callback-form__name,
+      .callback-form__input:valid + .callback-form__name {
+        transform: translate(-6px, -20px) scale(0.8);
+      }
+      
+      .callback-form__note {
+        max-width: 300px;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      
+      .callback-form__submit {
+        padding: 18px 50px;
+        font-size: 11px;
+      }
+  }
